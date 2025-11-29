@@ -2,7 +2,7 @@ import Hero from "../components/Hero";
 import NewsCard from "../components/NewsCard";
 
 export default async function Home() {
-  const res = await fetch("http://localhost:3000/api/news", {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/news`, {
     cache: "no-store", // get fresh news every time
   });
 
