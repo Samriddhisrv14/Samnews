@@ -2,9 +2,9 @@
 
 A modern, fast, responsive news website inspired by **Hindustan**, built using **Next.js 16**, **Tailwind CSS**, and **NewsAPI**.
 
-🌍 **Live Demo:** [https://newswebsite-cyan.vercel.app/](https://newswebsite-cyan.vercel.app/)
+🌍 **Live Demo:** *(Add your live demo link here if available)*
 
-📦 **GitHub Repo:** [https://github.com/Chitravansh/newswebsite](https://github.com/Chitravansh/newswebsite)
+📦 **GitHub Repo:** *(Add your GitHub repo link here)*
 
 ---
 
@@ -62,7 +62,7 @@ newswebsite/
 ### 1️⃣ Clone the project
 
 ```
-git clone https://github.com/Chitravansh/newswebsite
+git clone YOUR_REPOSITORY_LINK_HERE
 cd newswebsite
 ```
 
@@ -93,13 +93,11 @@ Visit: [http://localhost:3000](http://localhost:3000)
 
 ## 🌐 Deployment (Vercel)
 
-Already deployed: [https://newswebsite-cyan.vercel.app/](https://newswebsite-cyan.vercel.app/)
-
 You must add environment variables on Vercel:
 
 ```
 NEWS_API_KEY=YOUR_NEWS_API_KEY
-NEXT_PUBLIC_BASE_URL=https://newswebsite-cyan.vercel.app
+NEXT_PUBLIC_BASE_URL=YOUR_DEPLOYED_URL
 ```
 
 ---
@@ -123,9 +121,11 @@ GET https://newsapi.org/v2/top-headlines?category=business&apiKey=API_KEY
 ## 📸 Screenshots
 
 ### ScreenShot 1
+
 ![ScreenShot 1](assets/Image1.png)
 
 ### ScreenShot 2
+
 ![ScreenShot 2](assets/Image2.png)
 
 ---
@@ -143,7 +143,7 @@ GET https://newsapi.org/v2/top-headlines?category=business&apiKey=API_KEY
 ## 🤝 Contributing
 
 Pull requests are welcome. For major changes, open an issue to discuss them first.
-Mail us at : chitravanshmohandevelops@gmail.com for more
+Mail me at : **YOUR_EMAIL_HERE**
 
 ---
 
