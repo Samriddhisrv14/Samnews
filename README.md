@@ -2,9 +2,9 @@
 
 A modern, fast, responsive news website inspired by **Hindustan**, built using **Next.js 16**, **Tailwind CSS**, and **NewsAPI**.
 
-🌍 **Live Demo:** *(Add your live demo link here if available)*
+🌍 **Live Demo:** *[https://samnews.vercel.app/](https://samnews.vercel.app/)*
 
-📦 **GitHub Repo:** *(Add your GitHub repo link here)*
+📦 **GitHub Repo:** *[https://github.com/Samriddhisrv14/Samnews](https://github.com/Samriddhisrv14/Samnews)*
 
 ---
 
@@ -143,7 +143,7 @@ GET https://newsapi.org/v2/top-headlines?category=business&apiKey=API_KEY
 ## 🤝 Contributing
 
 Pull requests are welcome. For major changes, open an issue to discuss them first.
-Mail me at : **YOUR_EMAIL_HERE**
+Mail me at : **samriddhisrv1401@gmail.com**
 
 ---
 
