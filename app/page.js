@@ -1,66 +1,39 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Hero from "../components/Hero";
+import NewsCard from "../components/NewsCard";
 
-export default function Home() {
+export default async function Home() {
+  const res = await fetch("http://localhost:3000/api/news", {
+    cache: "no-store", // get fresh news every time
+  });
+
+  const { topStory, mainStories, trendingStories } = await res.json();
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="max-w-6xl mx-auto p-4">
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        {/* LEFT SECTION */}
+        <div className="md:col-span-2">
+          <Hero article={topStory} />
+
+          <h2 className="text-xl font-bold mt-6 mb-3">Latest News</h2>
+
+          {mainStories.map((story, index) => (
+            <NewsCard key={index} article={story} />
+          ))}
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        {/* RIGHT SIDEBAR */}
+        <div className="border-l pl-6">
+          <h2 className="text-xl font-bold mb-4 text-red-700">Trending</h2>
+
+          {trendingStories.map((story, i) => (
+            <NewsCard key={i} article={story} />
+          ))}
         </div>
-      </main>
+      </div>
+
     </div>
   );
 }
